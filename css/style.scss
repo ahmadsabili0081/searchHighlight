@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+    h1{
+        text-align: center;
+        padding-top: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .apps__search{
+        width: 600px;
+        height: auto;
+        border: 1px solid;
+        margin: 50px auto;
+        padding: 5px;
+        font-family: Arial, Helvetica, sans-serif;
+        #content{
+            width: 100%;
+            margin-top: 20px;
+            .highlight {
+                background-color: yellow;
+              }
+              
+              .highlight.active {
+                background: orange;
+              }
+        }
+        .search{
+            input{
+                width: 300px;
+                padding: 7px;
+            }
+            button#searchBtn{
+                display: inline-block;
+                margin: 0px 5px;
+                padding: 7px 20px;
+                cursor: pointer;
+            }
+            .found{
+                display: none;
+                color: black;
+                padding: 5px 5px;
+                label::after{
+                    content: ' ';
+                    margin-left: 10px;
+                    display: inline-block;
+                }
+                button{
+                    display: inline-block;
+                    padding: 5px 10px;
+                    cursor: pointer;
+                }
+            }
+        }
+        .highlight {
+            background-color: yellow;
+          }
+          
+          .highlight.active {
+            background: orange;
+          }
+    }
+}
+@media screen and (max-width:570px) {
+    .container{
+        width: 100%;
+        padding: 0px 10px;
+        .apps__search{
+            width: 100%;
+            .search{
+                input{
+                    width: 100%;
+                }
+                button#searchBtn{
+                    margin: 10px 0px;
+                }
+                .found{
+                    button{
+                        margin: 10px 5px;
+                    }
+                }
+            }
+        }
+    }
+}
